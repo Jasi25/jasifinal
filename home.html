@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editkaro Portfolio</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #FF9A9E, #FAD0C4, #FBC2EB, #FFE0AC);
+            background-size: 400% 400%;
+            animation: gradientAnimation 10s ease infinite;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            color: white;
+            background-color: #FF7E5F;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li button {
+            background-color: #FF6B6B;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li button:hover {
+            background-color: #FFA07A;
+        }
+
+        .portfolio {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .video-item {
+            width: 300px;
+            height: 169px;
+            overflow: hidden;
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .video-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .video-item {
+                width: 100%;
+                max-width: 500px;
+            }
+
+            nav ul {
+                gap: 10px;
+            }
+
+            nav ul li button {
+                padding: 8px 10px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Editkaro.in Portfolio</h1>
+        <nav>
+            <ul>
+                <li><button class="filter-btn" data-filter="all">All</button></li>
+                <li><button class="filter-btn" data-filter="short">Short Videos</button></li>
+                <li><button class="filter-btn" data-filter="long">Long Videos</button></li>
+                <li><button class="filter-btn" data-filter="gaming">Gaming Videos</button></li>
+                <li><button class="filter-btn" data-filter="football">Football Edits</button></li>
+                <li><button class="filter-btn" data-filter="ecommerce">eCommerce Ads</button></li>
+                <li><button class="filter-btn" data-filter="documentary">Documentary Style</button></li>
+                <li><button class="filter-btn" data-filter="anime">Anime Videos</button></li>
+                <li><button class="filter-btn" data-filter="ads">Ads</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="portfolio">
+            <!-- Video items -->
+            <div class="video-item short"><iframe src="https://www.youtube.com/embed/ugrq-usgF4s" frameborder="0" allowfullscreen></iframe></div>
+            <div class="video-item short"><iframe src="https://www.youtube.com/embed/-vC-MS87hss" frameborder="0" allowfullscreen></iframe></div>
+            <div class="video-item short"><iframe src="https://www.youtube.com/embed/VCPGMjCW0is" frameborder="0" allowfullscreen></iframe></div>
+            <div class="video-item long"><iframe src="https://www.youtube.com/embed/IlakRozwDyA" frameborder="0" allowfullscreen></iframe></div>
+            <div class="video-item gaming"><iframe src="https://www.youtube.com/embed/1_mT7TFQO1c" frameborder="0" allowfullscreen></iframe></div>
+            <div class="video-item gaming"><iframe src="https://www.youtube.com/embed/7NcSJZV3-fo" frameborder="0" allowfullscreen></iframe></div>
+            <div class="video-item football"><iframe src="https://www.youtube.com/embed/Xk9o_cIaQ_Q" frameborder="0" allowfullscreen></iframe></div>
+            <div class="video-item documentary"><iframe src="https://www.youtube.com/embed/0gEZsoB1Ab4" frameborder="0" allowfullscreen></iframe></div>
+            <div class="video-item documentary"><iframe src="https://www.youtube.com/embed/xXTsp4sjVhc" frameborder="0" allowfullscreen></iframe></div>
+            <div class="video-item ecommerce"><iframe src="https://www.youtube.com/embed/jbfuzcrfjqQ" frameborder="0" allowfullscreen></iframe></div>
+            <div class="video-item anime"><iframe src="https://www.youtube.com/embed/tbsfc6Wn2DU" frameborder="0" allowfullscreen></iframe></div>
+            <div class="video-item anime"><iframe src="https://www.youtube.com/embed/EdsC5J-FzJ8" frameborder="0" allowfullscreen></iframe></div>
+            <div class="video-item ads"><iframe src="https://www.youtube.com/embed/8oON21G1Bqg" frameborder="0" allowfullscreen></iframe></div>
+            <div class="video-item ads"><iframe src="https://www.youtube.com/embed/QsY8fnvMn6c" frameborder="0" allowfullscreen></iframe></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Editkaro.in</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
